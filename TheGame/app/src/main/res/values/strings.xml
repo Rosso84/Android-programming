@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">TicTacToe</string>
+    <string name="btnReady">READY!</string>
+    <string name="btnPlay">LETS PLAY!</string>
+    <string name="p1TxtVW">P1</string>
+    <string name="p2TxtVW">P2</string>
+    <string name="vs">VS</string>
+    <string name="btnP1Quit">Quit P1</string>
+    <string name="btnP2Quit">Quit P2</string>
+    <string name="btnexit">Exit</string>
+    <string name="btnHighScore">View Highscores</string>
+    <string name="edtVwSignIn">Enter name</string>
+    <string name="enterName">Enter Name</string>
+    <string name="btnRetry">Retry</string>
+    <string name="btnTxtX">X</string>
+    <string name="btnTxtO">O</string>
+    <string name="tvP2">player2</string>
+    <string name="tvP1">player1</string>
+    <string name="btnSave">SAVE</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tvHSList">Highscore list</string>
+    <string name="btnClear">Clear list</string>
+
+
+</resources>

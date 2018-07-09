@@ -1,0 +1,62 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="no.woact.morroo16.Fragments.InGameFragmentBottom">
+    <!--height: wrap-->
+
+    <Button
+        android:id="@+id/btnExit"
+        android:layout_width="70dp"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10sp"
+        android:text="@string/btnexit" />
+
+    <Button
+        android:id="@+id/btnRetry"
+        android:layout_width="70dp"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="90dp"
+        android:text="@string/btnRetry" />
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="70dp"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/btnSave" />
+
+    <Button
+        android:id="@+id/btnQuitP1"
+        android:layout_width="70dp"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="88dp"
+        android:text="@string/btnP1Quit" />
+
+    <Button
+        android:id="@+id/btnQuitP2"
+        android:layout_width="70dp"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10sp"
+        android:text="@string/btnP2Quit" />
+
+    <TextView
+        android:id="@+id/tvPlayerTurn"
+        android:layout_width="match_parent"
+        android:layout_height="30sp"
+        android:layout_above="@+id/btnExit"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="13dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:text=""/>
+
+</RelativeLayout>

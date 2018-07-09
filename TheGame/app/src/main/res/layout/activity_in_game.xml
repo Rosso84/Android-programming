@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="no.woact.morroo16.Activity.InGameActivity">
+
+
+    <fragment
+        android:id="@+id/fragmentTopId"
+        android:name="no.woact.morroo16.Fragments.InGameFragmentTop"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        tools:layout="@layout/fragment_in_game_fragment_top" />
+
+
+  <fragment
+        android:id="@+id/fragmentMidId"
+        android:layout_width="match_parent"
+        android:layout_height="365dp"
+        android:layout_marginTop="100dp"
+        android:name="no.woact.morroo16.Fragments.InGameFragmentMidle"
+        tools:layout="@layout/fragment_in_game_fragment_midle"/>
+
+    <fragment
+        android:id="@+id/fragBottomId"
+        android:name="no.woact.morroo16.Fragments.InGameFragmentBottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout="@layout/fragment_in_game_fragment_bottom"/>
+
+</RelativeLayout>
