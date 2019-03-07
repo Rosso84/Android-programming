@@ -16,6 +16,7 @@ Tools needed:
 
 -emulator or an android phone 
 
--firebase account: https://firebase.google.com and replace token with your own tutorial: https://developer.android.com/studio/write/firebase
+-firebase account: https://firebase.google.com and replace token with your own tutorial: 
+https://firebase.google.com/docs/android/setup
 
 
