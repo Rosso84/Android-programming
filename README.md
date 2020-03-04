@@ -14,9 +14,11 @@ Tools needed:
 
 -android studio IDE
 
--emulator or an android phone 
+-emulator or an android phone (I used emulator Pixel 3a XL API 28 6", Pie)
 
--firebase account: https://firebase.google.com and replace token with your own tutorial: 
-https://firebase.google.com/docs/android/setup
+-a firebase cloud account: https://firebase.google.com and replace token with your own.
+tutorial:  https://firebase.google.com/docs/android/setup
 
 
+## Install and run
+First build the project and the just run theGame-app module using the play button.
