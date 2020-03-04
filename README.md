@@ -21,4 +21,4 @@ tutorial:  https://firebase.google.com/docs/android/setup
 
 
 ## Install and run
-First build the project and the just run theGame-app module using the play button.
+First build the project and the just run theGame-app module using the play button. You may want to disable some actions against files in your anti virus for faster build.  
