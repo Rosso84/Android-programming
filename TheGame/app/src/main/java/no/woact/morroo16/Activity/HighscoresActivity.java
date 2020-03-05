@@ -3,7 +3,7 @@ package no.woact.morroo16.Activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -20,7 +20,7 @@ import no.woact.morroo16.Dbhandler.WinnerData;
 import no.woact.morroo16.Messager;
 import no.woact.morroo16.tictactoe.R;
 
-/* By Roosbeh Morandi*/
+/*Created By Roozbeh Moradi*/
 
 
 public class HighscoresActivity extends AppCompatActivity {

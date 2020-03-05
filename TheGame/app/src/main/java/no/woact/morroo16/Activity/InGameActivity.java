@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.os.SystemClock;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -60,21 +60,18 @@ public class InGameActivity extends AppCompatActivity {
         mDBsoure.open();
     }
 
-    /*kopiert fra Tor-Mortens eksempler*/
     @Override
     protected void onResume() {
         super.onResume();
         mDBsoure.open();
     }
 
-    /*kopiert fra Tor-Mortens eksempler*/
     @Override
     protected void onPause() {
         super.onPause();
         mDBsoure.close();
     }
 
-    /*kopiert fra Tor-Mortens eksempler*/
     @Override
     protected void onDestroy() {
         mDBsoure.close();
@@ -243,6 +240,10 @@ public class InGameActivity extends AppCompatActivity {
         }
     }
 
+    private void resetTimer() {
+        timer.setBase(SystemClock.elapsedRealtime());
+    }
+
     private void setWinner(String player) {
         winner = player;
         gameOver = true;
@@ -308,7 +309,7 @@ public class InGameActivity extends AppCompatActivity {
 
 
 
-    /*Easy mode*/
+    /*super easy mode*/
     private void setRandomOnclick() {
         ArrayList<Button> availableButtons = new ArrayList<>();
         if (player1.equals(bot) || player2.equals(bot)) {
@@ -346,7 +347,7 @@ public class InGameActivity extends AppCompatActivity {
                     ListOfAvailableButtons.add(gameButtonList.get(i));
                 }
             }
-            //Randomize
+            //Randomize bot select ( super easy mode)
             Collections.shuffle(ListOfAvailableButtons);
             Button randomButton = ListOfAvailableButtons.get(0);
             if (playerTurn.equals(player)) {
@@ -359,43 +360,42 @@ public class InGameActivity extends AppCompatActivity {
     }
 
     private void matchController() {
-        /*player1 controller */
 
-        if (isButtonXorO(btn2, "X") && isButtonXorO(btn3, "X") && isButtonXorO(btn1, "X")) {
+        /*player1 controller */
+        if (isButtonSelected(btn2, "X") && isButtonSelected(btn3, "X") && isButtonSelected(btn1, "X")) {
             setWinner(player1);
-        } else if (isButtonXorO(btn4, "X") && isButtonXorO(btn5, "X") && isButtonXorO(btn6, "X")) {
+        } else if (isButtonSelected(btn4, "X") && isButtonSelected(btn5, "X") && isButtonSelected(btn6, "X")) {
             setWinner(player1);
-        } else if (isButtonXorO(btn7, "X") && isButtonXorO(btn8, "X") && isButtonXorO(btn9, "X")) {
+        } else if (isButtonSelected(btn7, "X") && isButtonSelected(btn8, "X") && isButtonSelected(btn9, "X")) {
             setWinner(player1);
-        } else if (isButtonXorO(btn7, "X") && isButtonXorO(btn5, "X") && isButtonXorO(btn3, "X")) {
+        } else if (isButtonSelected(btn7, "X") && isButtonSelected(btn5, "X") && isButtonSelected(btn3, "X")) {
             setWinner(player1);
-        } else if (isButtonXorO(btn1, "X") && isButtonXorO(btn5, "X") && isButtonXorO(btn9, "X")) {
+        } else if (isButtonSelected(btn1, "X") && isButtonSelected(btn5, "X") && isButtonSelected(btn9, "X")) {
             setWinner(player1);
-        } else if (isButtonXorO(btn1, "X") && isButtonXorO(btn4, "X") && isButtonXorO(btn7, "X")) {
+        } else if (isButtonSelected(btn1, "X") && isButtonSelected(btn4, "X") && isButtonSelected(btn7, "X")) {
             setWinner(player1);
-        } else if (isButtonXorO(btn2, "X") && isButtonXorO(btn5, "X") && isButtonXorO(btn8, "X")) {
+        } else if (isButtonSelected(btn2, "X") && isButtonSelected(btn5, "X") && isButtonSelected(btn8, "X")) {
             setWinner(player1);
-        } else if (isButtonXorO(btn3, "X") && isButtonXorO(btn6, "X") && isButtonXorO(btn9, "X")) {
+        } else if (isButtonSelected(btn3, "X") && isButtonSelected(btn6, "X") && isButtonSelected(btn9, "X")) {
             setWinner(player1);
         }
 
         /*player2 controller*/
-
-        else if (isButtonXorO(btn1, "O") && isButtonXorO(btn2, "O") && isButtonXorO(btn3, "O")) {
+        else if (isButtonSelected(btn1, "O") && isButtonSelected(btn2, "O") && isButtonSelected(btn3, "O")) {
             setWinner(player2);
-        } else if (isButtonXorO(btn4, "O") && isButtonXorO(btn5, "O") && isButtonXorO(btn6, "O")) {
+        } else if (isButtonSelected(btn4, "O") && isButtonSelected(btn5, "O") && isButtonSelected(btn6, "O")) {
             setWinner(player2);
-        } else if (isButtonXorO(btn7, "O") && isButtonXorO(btn8, "O") && isButtonXorO(btn9, "O")) {
+        } else if (isButtonSelected(btn7, "O") && isButtonSelected(btn8, "O") && isButtonSelected(btn9, "O")) {
             setWinner(player2);
-        } else if (isButtonXorO(btn7, "O") && isButtonXorO(btn5, "O") && isButtonXorO(btn3, "O")) {
+        } else if (isButtonSelected(btn7, "O") && isButtonSelected(btn5, "O") && isButtonSelected(btn3, "O")) {
             setWinner(player2);
-        } else if (isButtonXorO(btn1, "O") && isButtonXorO(btn5, "O") && isButtonXorO(btn9, "O")) {
+        } else if (isButtonSelected(btn1, "O") && isButtonSelected(btn5, "O") && isButtonSelected(btn9, "O")) {
             setWinner(player2);
-        } else if (isButtonXorO(btn1, "O") && isButtonXorO(btn4, "O") && isButtonXorO(btn7, "O")) {
+        } else if (isButtonSelected(btn1, "O") && isButtonSelected(btn4, "O") && isButtonSelected(btn7, "O")) {
             setWinner(player2);
-        } else if (isButtonXorO(btn2, "O") && isButtonXorO(btn5, "O") && isButtonXorO(btn8, "O")) {
+        } else if (isButtonSelected(btn2, "O") && isButtonSelected(btn5, "O") && isButtonSelected(btn8, "O")) {
             setWinner(player2);
-        } else if (isButtonXorO(btn3, "O") && isButtonXorO(btn6, "O") && isButtonXorO(btn9, "O")) {
+        } else if (isButtonSelected(btn3, "O") && isButtonSelected(btn6, "O") && isButtonSelected(btn9, "O")) {
             setWinner(player2);
         } else {
             drawGame();
@@ -428,8 +428,8 @@ public class InGameActivity extends AppCompatActivity {
         }
     }
 
-    private boolean isButtonXorO(Button btn, String XorX) {
-        if (btn.getText().toString().equals(XorX)) {
+    private boolean isButtonSelected(Button btn, String XorO) {
+        if (btn.getText().toString().equals(XorO)) {
             return true;
         }
         return false;
@@ -467,9 +467,6 @@ public class InGameActivity extends AppCompatActivity {
         gameButtonList.add(btn9);
     }
 
-    private void resetTimer() {
-        timer.setBase(SystemClock.elapsedRealtime());
-    }
 
 }
 

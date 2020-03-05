@@ -1,19 +1,20 @@
 package no.woact.morroo16.Activity;
-
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-
 import no.woact.morroo16.Messager;
 import no.woact.morroo16.tictactoe.R;
 
 
 
 /* By Roosbeh Morandi*/
+
+
+
 
 public class MainPageActivity extends AppCompatActivity {
 
@@ -107,18 +108,18 @@ public class MainPageActivity extends AppCompatActivity {
     }
 
     public void disableEdtAndChangeBtnColor(EditText edt, Button btnReady, Button btnPlay) {
-        edt.setEnabled(false);//
+        edt.setEnabled(false);
         btnReady.setBackgroundColor(Color.RED);
         btnPlay.setBackgroundColor(Color.RED);
     }
 
-    /*gjort i øvingen*/
+
     public void goToHighScorePage() {
         Intent intent = new Intent(MainPageActivity.this, HighscoresActivity.class);
         startActivity(intent);
     }
 
-    /*Gjort i øvingen*/
+
     private void startGame() {
         Intent intent = new Intent(MainPageActivity.this, InGameActivity.class);
         intent.putExtra(NAME_P1, getPlayerName(edtP1));
