@@ -1,9 +1,6 @@
-# Android-programming
-Exam 2018. Tic tac toe game 
-
 ## About
 A good old three in a row game where one can choose to play against an AI or in versus mode against another player (offline).
-It includes the use of fragments,  firebase (noSql database), listView (highscore list) and SQL Lite.    
+It includes the use of fragments, firebase (noSql database), listView (highscore list) and SQL Lite.    
 
 ## Requirements
 Tools needed: 
