@@ -5,7 +5,7 @@ It includes the use of fragments, firebase (noSql database), listView (highscore
 ## Requirements
 Tools needed: 
 
--java sdk 1.8
+-java sdk minimum 1.8
 
 -android studio IDE
 
